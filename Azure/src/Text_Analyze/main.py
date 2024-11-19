@@ -2,7 +2,7 @@ import requests
 import os
 
 subscription_key = "FBtAVbO1eXRdpjeSu0HAwe9DlNRDcNTOiy1KSdmFBueWFh9cMP8EJQQJ99AKACYeBjFXJ3w3AAAbACOGok3J"
-endpoint = "https://api.cognitive.microsofttranslator.com/"
+endpoint = "https://tradutor-api-001.cognitiveservices.azure.com/"
 location = "eastus"
 language_destination = "pt-br"
 
@@ -31,4 +31,4 @@ def tradutor_texto(text, target_language):
     response = request.json()
     return response[0]["translations"][0]["text"]
 
-tradutor_texto("red", language_destination)
+tradutor_texto("red", target_language=language_destination)
